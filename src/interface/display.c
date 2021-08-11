@@ -6,7 +6,7 @@
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 18:44:46 by ciglesia          #+#    #+#             */
-/*   Updated: 2021/08/10 23:24:43 by ciglesia         ###   ########.fr       */
+/*   Updated: 2021/08/11 05:31:46 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ void	display_files(void)
 	nodelay(stdscr, 1);
 	resize_window(w, &x, &y, &ix, &iy);
 	while ((key = getch()) != 'q') {
+		if (key == 27)
+			break ;
 		usleep(100000);
 		if (key == KEY_RESIZE) {
 			clear();
