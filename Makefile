@@ -80,6 +80,9 @@ fclean	:		clean
 
 re		:		fclean all
 
-.PHONY	:		all clean re
+apt		:
+				sudo apt install -y libncurses-dev
+
+.PHONY	:		all fclean clean re apt
 
 -include $(DEPS)
